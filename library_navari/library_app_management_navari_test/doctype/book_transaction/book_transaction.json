@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "field:book_title",
+ "creation": "2024-09-24 19:06:11.704173",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_information_section",
+  "transaction_type",
+  "book_title",
+  "book_author",
+  "isbn",
+  "borrowed_on",
+  "total_borrowing_days",
+  "return_by",
+  "column_break_mzyr",
+  "book_issuer",
+  "library_member",
+  "book_status",
+  "rent_fee_per_day",
+  "late_fee_per_day",
+  "total_fee",
+  "outstanding_debt"
+ ],
+ "fields": [
+  {
+   "fieldname": "transaction_information_section",
+   "fieldtype": "Section Break",
+   "label": "Transaction Information"
+  },
+  {
+   "default": "Borrow",
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Transaction Type",
+   "options": "Borrow\nReturn"
+  },
+  {
+   "fieldname": "book_title",
+   "fieldtype": "Link",
+   "label": "Book Title",
+   "options": "Library Book",
+   "unique": 1
+  },
+  {
+   "fieldname": "book_author",
+   "fieldtype": "Data",
+   "label": "Book Author",
+   "read_only": 1
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "column_break_mzyr",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "borrowed_on",
+   "fieldtype": "Datetime",
+   "label": "Borrowed On"
+  },
+  {
+   "fieldname": "return_by",
+   "fieldtype": "Datetime",
+   "label": "Return By"
+  },
+  {
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "label": "Library Member",
+   "options": "LIbrary Member"
+  },
+  {
+   "fieldname": "book_issuer",
+   "fieldtype": "Link",
+   "label": "Book Issuer",
+   "options": "User"
+  },
+  {
+   "fieldname": "book_status",
+   "fieldtype": "Select",
+   "label": "Book Status",
+   "options": "New\nGood\nNot Good"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "rent_fee_per_day",
+   "fieldtype": "Currency",
+   "label": "Rent Fee per Day"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "late_fee_per_day",
+   "fieldtype": "Currency",
+   "label": "Late Fee Per Day"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "total_fee",
+   "fieldtype": "Currency",
+   "label": "Total Fee"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "outstanding_debt",
+   "fieldtype": "Currency",
+   "label": "Outstanding Debt"
+  },
+  {
+   "fieldname": "total_borrowing_days",
+   "fieldtype": "Data",
+   "label": "Total Borrowing Days"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-24 22:42:32.124291",
+ "modified_by": "Administrator",
+ "module": "Library App Management Navari Test",
+ "name": "Book Transaction",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "library_member",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "library_member"
+}

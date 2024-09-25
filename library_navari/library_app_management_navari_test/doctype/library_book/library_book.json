@@ -1,0 +1,198 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:book_title",
+ "creation": "2024-09-23 21:15:49.056387",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "book_information_section",
+  "book_title",
+  "book_author",
+  "book_publisher",
+  "book_edition",
+  "book_language",
+  "year_of_publication",
+  "book_condition",
+  "book_cover_image",
+  "column_break_ywoz",
+  "book_description",
+  "book_genre",
+  "isbn",
+  "book_subject",
+  "availability_information_section",
+  "number_of_copies_available",
+  "date_registered",
+  "column_break_dwxz",
+  "purchase_price",
+  "rent_fee",
+  "connections_tab",
+  "transactions",
+  "tab_3_tab"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "book_information_section",
+   "fieldtype": "Section Break",
+   "label": "Book Information"
+  },
+  {
+   "fieldname": "book_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Book Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "book_author",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Book Author",
+   "reqd": 1
+  },
+  {
+   "fieldname": "book_genre",
+   "fieldtype": "Data",
+   "label": "Book Genre"
+  },
+  {
+   "fieldname": "book_publisher",
+   "fieldtype": "Data",
+   "label": "Book Publisher"
+  },
+  {
+   "fieldname": "book_edition",
+   "fieldtype": "Data",
+   "label": "Book Edition"
+  },
+  {
+   "fieldname": "book_language",
+   "fieldtype": "Data",
+   "label": "Book Language",
+   "options": "Language"
+  },
+  {
+   "fieldname": "book_description",
+   "fieldtype": "Text",
+   "label": "Book Description"
+  },
+  {
+   "fieldname": "year_of_publication",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Year of Publication",
+   "reqd": 1
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN"
+  },
+  {
+   "fieldname": "book_condition",
+   "fieldtype": "Data",
+   "label": "Book Condition"
+  },
+  {
+   "fieldname": "book_cover_image",
+   "fieldtype": "Attach Image",
+   "label": "Book Cover Image"
+  },
+  {
+   "fieldname": "availability_information_section",
+   "fieldtype": "Section Break",
+   "label": "Availability & Financial Information"
+  },
+  {
+   "fieldname": "number_of_copies_available",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Number of Copies Available",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_registered",
+   "fieldtype": "Datetime",
+   "label": "Acquisition Registered",
+   "reqd": 1
+  },
+  {
+   "fieldname": "purchase_price",
+   "fieldtype": "Currency",
+   "label": "Purchase Price",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_fee",
+   "fieldtype": "Currency",
+   "label": "Rent Fee",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ywoz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dwxz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "transactions",
+   "fieldtype": "Link",
+   "label": "Transactions",
+   "options": "Book Transaction"
+  },
+  {
+   "fieldname": "book_subject",
+   "fieldtype": "Data",
+   "label": "Book Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tab_3_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 3"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "modified": "2024-09-24 21:19:01.714970",
+ "modified_by": "Administrator",
+ "module": "Library App Management Navari Test",
+ "name": "Library Book",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "book_author",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "book_title"
+}

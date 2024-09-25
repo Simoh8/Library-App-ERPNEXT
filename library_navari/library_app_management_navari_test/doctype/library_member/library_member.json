@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2024-09-24 18:39:17.020876",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_information_section",
+  "full_name",
+  "email_address",
+  "phone_number",
+  "address",
+  "idpassport_number",
+  "number_of_days_delayed_with_a_book",
+  "column_break_bblm",
+  "membership_type",
+  "join_date",
+  "membership_expiry_date",
+  "status",
+  "outstanding_debt",
+  "total_books_issued",
+  "tab_2_tab",
+  "connections_section",
+  "books_currently_issued",
+  "last_issued_date",
+  "column_break_uckz",
+  "total_late_returns"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_information_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "idpassport_number",
+   "fieldtype": "Data",
+   "label": "ID/Passport Number"
+  },
+  {
+   "fieldname": "column_break_bblm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Regular",
+   "fieldname": "membership_type",
+   "fieldtype": "Select",
+   "label": "Membership Type",
+   "options": "Regular\nPremium\nStudent"
+  },
+  {
+   "fieldname": "join_date",
+   "fieldtype": "Date",
+   "label": "Join Date"
+  },
+  {
+   "fieldname": "membership_expiry_date",
+   "fieldtype": "Date",
+   "label": "Membership Expiry Date"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired\nSuspended"
+  },
+  {
+   "fieldname": "outstanding_debt",
+   "fieldtype": "Currency",
+   "label": "Outstanding Debt"
+  },
+  {
+   "fieldname": "total_books_issued",
+   "fieldtype": "Data",
+   "label": "Total Books Issued"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 2"
+  },
+  {
+   "fieldname": "connections_section",
+   "fieldtype": "Section Break",
+   "label": "Connections "
+  },
+  {
+   "fieldname": "books_currently_issued",
+   "fieldtype": "Link",
+   "label": "Books Currently Issued",
+   "options": "Book Transaction"
+  },
+  {
+   "fieldname": "last_issued_date",
+   "fieldtype": "Data",
+   "label": "Last Issued Date"
+  },
+  {
+   "fieldname": "column_break_uckz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_late_returns",
+   "fieldtype": "Data",
+   "label": "Total Late Returns"
+  },
+  {
+   "bold": 1,
+   "fieldname": "number_of_days_delayed_with_a_book",
+   "fieldtype": "Data",
+   "label": "Number Of Days Delayed With a Book "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-24 20:33:05.832952",
+ "modified_by": "Administrator",
+ "module": "Library App Management Navari Test",
+ "name": "LIbrary Member",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "full_name",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name",
+ "track_changes": 1
+}
