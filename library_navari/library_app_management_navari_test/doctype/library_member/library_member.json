@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:full_name",
+ "autoname": "format:MEMB{full_name}-{join_date}",
  "creation": "2024-09-24 18:39:17.020876",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -13,7 +13,6 @@
   "phone_number",
   "address",
   "idpassport_number",
-  "number_of_days_delayed_with_a_book",
   "column_break_bblm",
   "membership_type",
   "join_date",
@@ -26,7 +25,8 @@
   "books_currently_issued",
   "last_issued_date",
   "column_break_uckz",
-  "total_late_returns"
+  "total_late_returns",
+  "amended_from"
  ],
  "fields": [
   {
@@ -35,6 +35,7 @@
    "label": "Personal Information"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "full_name",
    "fieldtype": "Data",
    "label": "Full Name",
@@ -46,6 +47,7 @@
    "label": "Email Address"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "phone_number",
    "fieldtype": "Data",
    "label": "Phone Number"
@@ -65,6 +67,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "default": "Regular",
    "fieldname": "membership_type",
    "fieldtype": "Select",
@@ -73,7 +76,7 @@
   },
   {
    "fieldname": "join_date",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
    "label": "Join Date"
   },
   {
@@ -82,6 +85,7 @@
    "label": "Membership Expiry Date"
   },
   {
+   "allow_on_submit": 1,
    "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -89,19 +93,27 @@
    "options": "Active\nExpired\nSuspended"
   },
   {
+   "allow_on_submit": 1,
+   "bold": 1,
    "fieldname": "outstanding_debt",
    "fieldtype": "Currency",
-   "label": "Outstanding Debt"
+   "label": "Outstanding Debt",
+   "non_negative": 1,
+   "precision": "1",
+   "read_only": 1
   },
   {
+   "allow_on_submit": 1,
+   "bold": 1,
    "fieldname": "total_books_issued",
    "fieldtype": "Data",
-   "label": "Total Books Issued"
+   "label": "Total Books Issued",
+   "read_only": 1
   },
   {
    "fieldname": "tab_2_tab",
    "fieldtype": "Tab Break",
-   "label": "Tab 2"
+   "label": "Connections "
   },
   {
    "fieldname": "connections_section",
@@ -129,19 +141,24 @@
    "label": "Total Late Returns"
   },
   {
-   "bold": 1,
-   "fieldname": "number_of_days_delayed_with_a_book",
-   "fieldtype": "Data",
-   "label": "Number Of Days Delayed With a Book "
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "LIbrary Member",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-09-24 20:33:05.832952",
+ "modified": "2024-09-27 18:45:21.317993",
  "modified_by": "Administrator",
  "module": "Library App Management Navari Test",
  "name": "LIbrary Member",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

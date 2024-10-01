@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "field:book_title",
+ "autoname": "format:TRANS-{borrowed_on}-{return_by}",
  "creation": "2024-09-24 19:06:11.704173",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -21,7 +21,14 @@
   "rent_fee_per_day",
   "late_fee_per_day",
   "total_fee",
-  "outstanding_debt"
+  "outstanding_debt",
+  "library_member_details_section",
+  "full_name",
+  "email_address",
+  "column_break_mrwg",
+  "phone_number",
+  "address",
+  "amended_from"
  ],
  "fields": [
   {
@@ -30,6 +37,7 @@
    "label": "Transaction Information"
   },
   {
+   "allow_on_submit": 1,
    "default": "Borrow",
    "fieldname": "transaction_type",
    "fieldtype": "Select",
@@ -40,8 +48,7 @@
    "fieldname": "book_title",
    "fieldtype": "Link",
    "label": "Book Title",
-   "options": "Library Book",
-   "unique": 1
+   "options": "Library Book"
   },
   {
    "fieldname": "book_author",
@@ -69,8 +76,9 @@
   },
   {
    "fieldname": "return_by",
-   "fieldtype": "Datetime",
-   "label": "Return By"
+   "fieldtype": "Date",
+   "label": "Return By",
+   "read_only": 1
   },
   {
    "fieldname": "library_member",
@@ -94,39 +102,88 @@
    "default": "0.0",
    "fieldname": "rent_fee_per_day",
    "fieldtype": "Currency",
-   "label": "Rent Fee per Day"
+   "label": "Rent Fee per Day",
+   "read_only": 1
   },
   {
    "default": "0.0",
    "fieldname": "late_fee_per_day",
    "fieldtype": "Currency",
-   "label": "Late Fee Per Day"
+   "label": "Late Fee Per Day",
+   "read_only": 1
   },
   {
    "default": "0.0",
    "fieldname": "total_fee",
    "fieldtype": "Currency",
-   "label": "Total Fee"
+   "label": "Total Fee",
+   "read_only": 1
   },
   {
+   "allow_on_submit": 1,
    "default": "0.0",
    "fieldname": "outstanding_debt",
    "fieldtype": "Currency",
-   "label": "Outstanding Debt"
+   "label": "Outstanding Debt",
+   "read_only": 1
   },
   {
    "fieldname": "total_borrowing_days",
    "fieldtype": "Data",
    "label": "Total Borrowing Days"
+  },
+  {
+   "fieldname": "library_member_details_section",
+   "fieldtype": "Section Break",
+   "label": "Library Member Details"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mrwg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Book Transaction",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-09-24 22:42:32.124291",
+ "modified": "2024-09-26 22:56:41.692875",
  "modified_by": "Administrator",
  "module": "Library App Management Navari Test",
  "name": "Book Transaction",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -146,5 +203,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "library_member"
+ "title_field": "library_member",
+ "track_changes": 1
 }

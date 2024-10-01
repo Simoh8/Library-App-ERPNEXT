@@ -1,8 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "allow_rename": 1,
- "autoname": "field:book_title",
+ "autoname": "format:BOOK-{book_title}-{date_registered}",
  "creation": "2024-09-23 21:15:49.056387",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -24,6 +23,7 @@
   "availability_information_section",
   "number_of_copies_available",
   "date_registered",
+  "late_fee_per_day",
   "column_break_dwxz",
   "purchase_price",
   "rent_fee",
@@ -70,7 +70,7 @@
   },
   {
    "fieldname": "book_language",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Book Language",
    "options": "Language"
   },
@@ -163,16 +163,22 @@
    "fieldname": "tab_3_tab",
    "fieldtype": "Tab Break",
    "label": "Tab 3"
+  },
+  {
+   "bold": 1,
+   "fieldname": "late_fee_per_day",
+   "fieldtype": "Currency",
+   "label": "Late Fee Per Day"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2024-09-24 21:19:01.714970",
+ "modified": "2024-09-26 20:52:12.167571",
  "modified_by": "Administrator",
  "module": "Library App Management Navari Test",
  "name": "Library Book",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
